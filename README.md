@@ -3,7 +3,7 @@
 
 Created here is a web page for a student study planner comprising of HTML, CSS and Javascript.
 This webpage will have a:
-* A home page to go through other pages
+* A home page navigate to other pages
 * Course and Schedule manager
 * Deadline/ calendar viewer
 * Study Schedule Generator
