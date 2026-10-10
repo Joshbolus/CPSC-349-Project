@@ -1,1 +1,89 @@
-<DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=""UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Study Planner</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Student Study Planner</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#planner">Planner</a></li>
+                    <li><a href="#results">Results</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Home Screen -->
+            <section id="home" class="screen active">
+                <h2>Welcome to Your Study Planner</h2>
+                <p>Organize your task, track progress, and stay on top of your coursework.</p>
+                <div class = "cta">
+                    <a href="#planner" class="button">Start Planning</a>                    
+                </div>
+            </section>
+
+            <!-- Planner Screen -->
+            <section id="planner" class="screen">
+                <h2>Weekly Planner</h2>
+                <form class ="planner-form">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., Database Systems">
+
+                    <label for="task">Task:</label>
+                    <input type="text" id="task" name="task" placeholder="e.g., Finish SQL assignment">
+
+                    <label for="deadline">Deadline:</label>
+                    <input type="date" id="deadline" name="deadline">
+
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+
+                    <button type="submit" class="button">Add Task</button>
+                </form>
+
+                <div class="task-list">
+                    <h3>Upcoming Task</h3>
+                    <ul>
+                        <li><strong>CPSC32:</strong> Insert sample data into Economic_indicators table - <em>Due Oct 12</em></li>
+                        <li><strong>CPSC 349:</strong> HTML/CSS milestone submission - <em>Due Oct 15</em></li>                        
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Result Screen -->
+            <section id="results" class="screen">
+                <h2>Progress Overview</h2>
+                <p>Track your completed tasks and visualize your study progress.</p>
+                <div> class ="progress-summary">
+                    <div class="progress-card">
+                        <h3>Hours Studied</h3>
+                        <p>26 hrs</p>
+                    </div>
+                    <div class="progress-card">
+                        <h3>Upcoming Deadlines</h3>
+                        <p>3 this week</p>
+                    </div>
+                </div>
+                <div class="cta">
+                    <a href="#planner" class="button">Add More Tasks</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Isabel Gargallo & Joshua Bolus | CPSC 349 Final Project</p>
+        </footer>
+    </body>
+</html>
+
+index.html
+4 KB
