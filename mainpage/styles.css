@@ -1,11 +1,217 @@
-h1 {
-    color: #333;
-    font-size: 2.5em;
-    text-align: center;
-    font-family: 'Agency-FB', sans-serif;
+* {
+	box-sizing: border-box;
 }
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/*Header Styles*/
+body {
+	margin: 0;
+	background: gray;
+	color: black;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	padding: 24px;
+	background: white;
+	border-bottom: 1px solid whitesmoke;
+}
+
+header h1 {
+	margin: 0;
+	color: rgb(79, 79, 226);
+	font-size: 28px;
+}
+/*Navigation Styles*/
+nav ul {
+	display: flex;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav a {
+	color: gray;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	color: rgb(79, 79, 226);
+}
+
+/*Main Styles*/
+main {
+	width: min(100% - 32px, 1000px);
+	min-height: calc(100vh - 150px);
+	margin: 40px auto;
+}
+
+.screen {
+	margin-bottom: 32px;
+	padding: 48px;
+	background: white;
+	border: 1px solid whitesmoke;
+	border-radius: 16px;
+	box-shadow: 0 10px 28px rgba(34, 52, 84, 0.08);
+}
+
+/*Planner Styles*/
+.screen h2 {
+	margin: 0 0 12px;
+	font-size: 36px;
+}
+
+.screen p {
+	color: #333435;
+}
+
+.cta {
+	margin-top: 24px;
+}
+
+/*Button Styles*/
+.button {
+	display: inline-block;
+	padding: 12px 20px;
+	border: 0;
+	border-radius: 8px;
+	background: rgb(79, 79, 226);
+	color: white;
+	font: inherit;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+.button:hover {
+	background: rgb(63, 63, 182);
+	transform: translateY(-1px);
+}
+
+.button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+	outline: 3px solid rgba(82, 103, 216, 0.3);
+	outline-offset: 2px;
+}
+
+/*Planner Styles*/
+.planner-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px 16px;
+	max-width: 700px;
+	margin-top: 24px;
+}
+
+.planner-form label {
+	align-self: end;
+	font-weight: 600;
+}
+
+.planner-form input,
+.planner-form select {
+	width: 100%;
+	min-height: 44px;
+	padding: 10.4px 12px;
+	border: 1px solid #dce3ee;
+	border-radius: 8px;
+	background: #fff;
+	color: #243247;
+	font: inherit;
+}
+
+.planner-form .button {
+	justify-self: start;
+	margin-top: 8px;
+}
+
+.task-list {
+	margin-top: 32px;
+	padding-top: 16px;
+	border-top: 1px solid #dce3ee;
+}
+
+/*Task List Styles*/
+.task-list h3,
+.progress-card h3 {
+	margin-top: 0;
+}
+
+.task-list li {
+	margin: 9.6px 0;
+	color: #65758b;
+}
+
+.task-list strong {
+	color: #243247;
+}
+
+/*Progress Styles*/
+.progress-summary {
+	display: grid;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.progress-card {
+	padding: 20px;
+	border: 1px solid #dce3ee;
+	border-radius: 12px;
+	background: #f8f9ff;
+}
+
+.progress-card h3 {
+	color: gray;
+	font-size: 16px;
+}
+
+.progress-card p {
+	margin: 0;
+	color: rgb(79, 79, 226);
+	font-size: 28px;
+	font-weight: 700;
+}
+
+/*Footer Styles*/
+footer {
+	padding: 16px;
+	color: #65758b;
+	font-size: 14.4px;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media (max-width: 600px) {
+	header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 12px;
+		padding: 16px;
+	}
+
+	nav ul {
+		flex-wrap: wrap;
+		gap: 8px 16px;
+	}
+
+	main {
+		margin: 20px auto;
+	}
+
+	.planner-form {
+		grid-template-columns: 1fr;
+	}
 }
